@@ -7,6 +7,7 @@ func Register(app *fiber.App, deps Dependencies) {
 	v1 := api.Group("/v1")
 
 	registerHealthRoutes(v1)
+	registerAuthRoutes(v1, deps)
 }
 
 func registerHealthRoutes(router fiber.Router) {

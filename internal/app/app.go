@@ -29,7 +29,7 @@ func New() (*App, error) {
 	}
 
 	app.initFiber()
-	app.
+	//app.
 }
 
 func (a *App) initInfrastructure() error {
@@ -50,8 +50,8 @@ func (a *App) initInfrastructure() error {
 
 func (a *App) initFiber() {
 	a.fiber = fiber.New(fiber.Config{
-		AppName: "Enterprise HelpDesk",
-		ReadTimeout: 10 * time.Second,
+		AppName:      "Enterprise HelpDesk",
+		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 	})
 
@@ -60,5 +60,5 @@ func (a *App) initFiber() {
 }
 
 func (a *App) initRoutes() {
-	rou
+	//rout
 }
