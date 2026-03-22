@@ -1,5 +1,5 @@
 package main
 
 func main() {
-	//application, err := app.
+	application, err := app.
 }

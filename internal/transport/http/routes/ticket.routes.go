@@ -15,13 +15,22 @@ func registerTicketRoutes(router fiber.Router, deps Dependencies) {
 	)
 
 	tickets.Get("/", h.GetList)
-	tickets.Get("/:id", h.getbyid)
+	tickets.Get("/:id", h.GetByID)
 
-	tickets.Post("/", h.create)
+	tickets.Post("/",
+		middleware.CSRF(deps),
+		middleware.Idempotency(deps),
+		h.Create,
+	)
 
-	tickets.Patch("/:id", h.update)
+	tickets.Patch("/:id",
+		middleware.CSRF(deps),
+		h.Update,
+	)
 
-	tickets.Get("/:id/comments", h.getcomments)
+	tickets.Get("/:id/comments", h.GetComments)
 
-	tickets.Post("/:id/comments", h.addcomment)
+	tickets.Post("/:id/comments",
+		middleware.CSRF(deps),
+		h.AddComement)
 }

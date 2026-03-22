@@ -29,7 +29,7 @@ func New() (*App, error) {
 	}
 
 	app.initFiber()
-	//app.
+	app.
 }
 
 func (a *App) initInfrastructure() error {
@@ -60,5 +60,5 @@ func (a *App) initFiber() {
 }
 
 func (a *App) initRoutes() {
-	//rout
+	rout
 }

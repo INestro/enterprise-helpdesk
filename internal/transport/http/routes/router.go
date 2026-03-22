@@ -8,6 +8,7 @@ func Register(app *fiber.App, deps Dependencies) {
 
 	registerHealthRoutes(v1)
 	registerAuthRoutes(v1, deps)
+	registerTicketRoutes(v1, deps)
 }
 
 func registerHealthRoutes(router fiber.Router) {
